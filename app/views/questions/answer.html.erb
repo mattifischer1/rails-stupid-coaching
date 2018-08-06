@@ -1,0 +1,22 @@
+<h1>Stupid Coach</h1>
+<p class="answer"><%= @answer %>
+  <br>
+  <em>-You</em>
+</p>
+
+
+<p class="coach">
+ <strong><% if @answer.include?("?") %>
+  Silly question, get dressed and go to work!
+  <% elsif @answer == "I am going to work right now!" %>
+  Great!
+  <% else %>
+  I don't care, get dressed and go to work!
+  <% end %></strong>
+  <br>
+ <em>-Your Coach</em>
+</p>
+  <br>
+<p class="link">
+  <%= link_to "Go Back", ask_path %>
+</p>
